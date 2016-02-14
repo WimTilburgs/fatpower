@@ -9,13 +9,16 @@
     function AppController($mdDialog,$scope,$mdSidenav,$log) {
         var vm = this;
         var alert;
-        vm.title = 'de titel';
+        vm.title = 'FirePower';
+        vm.toggleMenu   = toggleMenu;
         vm.showAlert = showAlert;
         vm.showDialog = showDialog;
         $scope.items = [1, 2, 3];
         activate();
         
-        // Async lookup for sidenav instance; will resolve when the instance is available
+       function toggleMenu() {
+            $mdSidenav('left').toggle();
+        }
 
 
         

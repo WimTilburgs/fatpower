@@ -8,9 +8,11 @@
     <meta name="mobile-web-app-capable" content="yes">
     <!-- Angular Material style sheet -->
     <!--<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>-->
+   
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css" />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/src/client/assets/styles.css">
     <style>
         .een {
             background-color: red;
@@ -48,11 +50,11 @@
 
 <body ng-app="App" ng-cloak ng-controller="AppController as vm" layout="row">
     <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" ng-click="vm.toggleMenu()" aria-label="Toon Menu"
-    md-is-locked-open="$mdMedia('gt-sm')">
-        <md-toolbar class="md-whiteframe-z1">
-            <h3>Menu</h3>
+    md-is-locked-open="$mdMedia('gt-sm')" >
+        <md-toolbar class="md-whiteframe-z2">
+            <h1 class="md-title">Menu</h1>
            
-        </md-toolbar>
+        </md-toolbar >
          <md-list>
              <md-list-item>
                     <md-button <a href="#/">Home</a> </md-button>
@@ -66,11 +68,16 @@
             </md-list>
          
     </md-sidenav>
+    
     <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
-        <md-toolbar>
-            <h3>{{vm.title}}</h3>
-
-        </md-toolbar>
+         <md-toolbar layout="row" class="md-whiteframe-z1">
+                <md-button id="main" class="menu" hide-gt-sm ng-click="vm.toggleMenu()" aria-label="Toon menu">
+                    <!--<md-icon md-svg-icon="menu"></md-icon>-->
+                    <i class="material-icons">menu</i>
+                    </md-button>
+                <h1 class="md-display-2"> <span class="fa fa-fire"> FirePower <span class="fa fa-bolt"> </h1>  <i class="material-icons">fire</i>
+                   
+                </md-toolbar>
 
    
 

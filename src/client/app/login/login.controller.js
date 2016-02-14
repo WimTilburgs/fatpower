@@ -3,7 +3,7 @@ var LoginController = (function () {
         this.init();
     }
     LoginController.prototype.init = function () {
-        this.title = 'Stap 12: selecteer een methode.';
+        this.title = 'Aanmelden';
     };
     LoginController.prototype.activate = function () {
     };

@@ -12,7 +12,7 @@
             this.init();
         }
         private init() {
-            this.title = 'Stap 12: selecteer een methode.';
+            this.title = 'Aanmelden';
         }
         activate(): void {
             
