@@ -1,0 +1,268 @@
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0,user-scalable=yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Angular Material style sheet -->
+    <!--<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .een {
+            background-color: red;
+        }
+        
+        .twee {
+            background-color: green;
+        }
+        
+        .drie {
+            background-color: blue;
+        }
+        
+        .vier {
+            background-color: brown
+        }
+        
+        .vijf {
+            background-color: yellow
+        }
+        
+        .zes {
+            background-color: blueviolet;
+        }
+        
+        .zeven {
+            background-color: cyan;
+        }
+        
+        .acht {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body ng-app="App" ng-cloak ng-controller="AppController as vm" layout="row">
+    <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" ng-click="vm.toggleMenu()" aria-label="Toon Menu"
+    md-is-locked-open="$mdMedia('gt-sm')">
+        <md-toolbar class="md-whiteframe-z1">
+            <h3>Menu</h3>
+           
+        </md-toolbar>
+         <md-list>
+             <md-list-item>
+                    <md-button <a href="#/">Home</a> </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button <a href="#/dialogs">Dialoog</a> </md-button>
+                </md-list-item>
+                  <md-list-item>
+                    <md-button <a href="#/login">Aanmelden</a> </md-button>
+                </md-list-item>
+            </md-list>
+         
+    </md-sidenav>
+    <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+        <md-toolbar>
+            <h3>{{vm.title}}</h3>
+
+        </md-toolbar>
+
+   
+
+
+
+
+   
+            <div ng-view></div>
+
+           
+
+      
+ </div>
+    <!--<div layout="row">
+            <div class="een" flex="20">
+                [flex="20"]
+
+            </div>
+            <div class="twee" flex="70">
+                [flex="70"]
+            </div>
+            <div class="drie" flex hide-sm hide-xs>
+                [flex]
+            </div>
+        </div>
+
+        <div layout="row" layout-wrap>
+            <div flex="30" class="drie">
+                [flex="30"]
+            </div>
+            <div flex="45" class="vier">
+                [flex="45"]
+            </div>
+            <div flex="25" class="vijf">
+                [flex="25"]
+            </div>
+            <div flex="33" class="zes">
+                [flex="33"]
+            </div>
+            <div flex="66" class="zeven">
+                [flex="66"]
+            </div>
+            <div flex="50" class="acht">
+                [flex="50"]
+            </div>
+            <div flex class="een">
+                [flex]
+            </div>
+        </div>
+
+
+        <div layout="row">
+            <div flex-gt-sm="66" flex="33" class="vijf">
+                flex 33% on mobile,
+                <br>and 66% on gt-sm devices.
+            </div>
+            <div flex-gt-sm="33" flex="66" class="drie">
+                flex 66% on mobile,
+                <br>and 33% on gt-sm devices.
+            </div>
+        </div>
+
+        <div layout="row" layout-wrap>
+            <div flex="none" class="een">
+                [flex="none"]
+            </div>
+            <div flex class="twee">
+                [flex]
+            </div>
+            <div flex="nogrow" class="drie">
+                [flex="nogrow"]
+            </div>
+            <div flex="grow" class="vier">
+                [flex="grow"]
+            </div>
+            <div flex="initial" class="vijf">
+                [flex="initial"]
+            </div>
+            <div flex="auto" class="zes">
+                [flex="auto"]
+            </div>
+            <div flex="noshrink" class="zeven">
+                [flex="noshrink"]
+            </div>-->
+    <!--<div flex="0" class="acht">
+            [flex="0"]
+        </div>-->
+    <!--</div>
+        <div layout="row" class="acht">
+            <div flex="66" flex-offset="15" class="twee">
+                [flex-offset="15"] [flex="66"]
+            </div>
+            <div flex class="een">
+                [flex]
+            </div>
+        </div>
+        <div layout="row" layout-sm="column">
+            <div flex class="een">
+                I'm above on mobile, and to the left on larger devices.
+            </div>
+            <div flex class="drie">
+                I'm below on mobile, and to the right on larger devices.
+            </div>
+        </div>-->
+    <!--<div>
+            <div layout="row" layout-margin class="een">
+                <div flex>Parent layout and this element have margins.</div>
+            </div>
+            <div layout="row" layout-padding class="twee">
+                <div flex>Parent layout and this element have padding.</div>
+            </div>
+            <div layout="row" layout-fill style="min-height: 224px;" class="drie">
+                <div flex>Parent layout is set to fill available space.</div>
+            </div>
+            <div layout="row" layout-padding layout-margin layout-fill style="min-height: 224px;" class="vier">
+                <div flex>I am using all three at once.</div>
+            </div>
+        </div>-->
+
+    <!--
+        <div layout="row" layout-wrap>
+            <div flex="33" class="een">[flex=33]</div>
+            <div flex="66" class="twee">[flex=66]</div>
+            <div flex="66" class="drie">[flex=66]</div>
+            <div flex="33" class="vier">[flex=33]</div>
+            <div flex="33" class="vijf">[flex=33]</div>
+            <div flex="33" class="zes">[flex=33]</div>
+            <div flex="33" class="zeven">[flex=33]</div>
+        </div>-->
+
+    <!--
+        <h1 class="md-display-4">h1 md-display-4 Headline</h1>
+        <h1 class="md-display-3">h1 md-display-3 Headline</h1>
+        <h2 class="md-display-1">h2 md-display-1 Headline</h2>
+        <h3 class="md-headline">h3 md-headline Headline</h3>
+        <h3 class="md-display-4">h3 md-display4 Headline</h3>-->
+
+
+    <!--<div>
+ <h3 class="md-title"><i class="material-icons">home</i>HOME</h3>
+</div>-->
+    <!--<p class="md-body-2">Body copy with medium weight.</p>
+        <md-button>Button</md-button>
+        <p class="md-body-1">Regular body copy <small class="md-caption">with small text</small>.</p>
+        <span class="md-caption">Caption</span>-->
+
+    <!-- For Material Design Icons -->
+    <!-- The class '.material-icons' is auto-added if a style has NOT been specified -->
+    <!--<md-icon> face </md-icon>
+        <md-icon md-font-set="material-icons"> face </md-icon>-->
+
+    <!-- The class '.material-icons' must be manually added if other styles are also specified-->
+    <!--<md-icon class="material-icons md-light md-48"> face </md-icon>-->
+
+    <!--<md-button>
+            <md-icon>home
+            </md-icon>HOME
+        </md-button>
+        <md-icon>home
+        </md-icon>HOME
+        <md-icon>home
+        </md-icon><span class="md-headline">HOME</span>
+
+
+        <md-button class="md-primary">Click me</md-button>
+        <md-button class="md-accent">or maybe me</md-button>
+        <md-button class="md-warn">Careful</md-button>
+
+        <md-button class="md-primary">Click me</md-button>
+        <md-button class="md-primary md-hue-1">Click me</md-button>
+        <md-button class="md-primary md-hue-2">Click me</md-button>
+        <md-datepicker ng-model="myDate" md-placeholder="Enter date"></md-datepicker>-->
+
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-aria.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-messages.min.js"></script>
+
+    <!-- Angular Material Library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.5/angular-material.min.js"></script>
+
+   <script src="/bower_components/angular-route/angular-route.js"></script>
+    <script src="/bower_components/firebase/firebase.js"></script>
+    <script src="/bower_components/angularfire/dist/angularfire.js"></script>
+ 
+    <script src="/src/client/app/app.js"></script>
+    <script src="/src/client/app/App.controller.js"></script>
+    <script src="/src/client/app/login/login.controller.js"></script>
+
+
+</body>
+
+</html>
